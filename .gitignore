@@ -38,3 +38,4 @@ Thumbs.db
 # Go build artifacts
 bin/
 pkg/
+tmp/

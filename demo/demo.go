@@ -19,6 +19,12 @@ var albums = []album{
 	{ID: "3", Title: "Sarah Vaughan and Clifford Brown", Artist: "Sarah Vaughan", Price: 39.99},
 }
 
+func getHelloWorld(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{
+		"message": "Hello World!",
+	})
+}
+
 func getPing(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"message": "pong",
@@ -54,6 +60,7 @@ func addAlbum(c *gin.Context) {
 
 func Main() {
 	router := gin.Default()
+	router.GET("/", getHelloWorld)
 	router.GET("/ping", getPing)
 
 	router.GET("/albums/:id", getAlbumById)
