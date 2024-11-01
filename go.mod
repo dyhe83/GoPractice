@@ -1,4 +1,4 @@
-module demo
+module github.com/dyhe83/go-practice
 
 go 1.22.6
 

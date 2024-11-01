@@ -1,4 +1,4 @@
-package demo
+package gin_restful
 
 import (
 	"net/http"
